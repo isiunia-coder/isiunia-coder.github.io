@@ -18,10 +18,16 @@
 
     header {
       display: flex;
-      justify-content: flex-end;
+      flex-direction: column;
       align-items: center;
-      padding: 20px 40px;
+      justify-content: center;
+      padding: 40px 20px 10px 20px;
       border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      height: 140px;
+      margin-bottom: 10px;
     }
 
     header h1 {
@@ -37,7 +43,6 @@
       margin: 0 auto;
     }
 
-    /* ✅ Rechteckiges Bild mit sanfter Rundung */
     img.portrait {
       width: 250px;
       height: auto;
@@ -55,12 +60,6 @@
       color: #0b5a5a;
       margin-top: 40px;
       font-size: 1.4rem;
-    }
-
-    h3 {
-      color: #333;
-      font-size: 1.1rem;
-      margin-top: 25px;
     }
 
     ul {
@@ -91,6 +90,8 @@
 
 <body>
   <header>
+    <!-- Dein neues Logo -->
+    <img src="logo_tarek_el_sayed_balance_exact.svg" alt="Logo Tarek El Sayed – Rechtsanwalt">
     <h1>Tarek El Sayed – Rechtsberatung</h1>
   </header>
 
