@@ -37,13 +37,18 @@
       margin: 0 auto;
     }
 
+    /* ✅ Rechteckiges Bild mit sanfter Rundung */
     img.portrait {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: auto;
       object-fit: cover;
-      border-radius: 100px;
+      border-radius: 12px;
       margin-bottom: 20px;
-      border: 2px solid #ccc;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h2 {
@@ -81,16 +86,7 @@
       color: #666;
       font-size: 0.9rem;
     }
-  img.portrait {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
+  </style>
 </head>
 
 <body>
@@ -110,7 +106,9 @@
       <p>
         Mein Name ist <strong>Tarek El Sayed</strong>. Als engagierter Rechtsanwalt berate und vertrete ich Mandanten
         mit Herz, Leidenschaft und fachlicher Kompetenz. Meine Schwerpunkte liegen in der
-        <strong>zivil- und strafrechtlichen Beratung</strong>. 
+        <strong>zivil- und strafrechtlichen Beratung</strong> sowie in den Bereichen
+        <strong>Versicherungsrecht</strong>, <strong>Verkehrsrecht</strong> und
+        <strong>internationales Speditionsrecht</strong>.
       </p>
 
       <p>
@@ -146,6 +144,5 @@
   </footer>
 </body>
 </html>
-
 
 
