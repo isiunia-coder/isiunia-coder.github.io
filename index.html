@@ -9,11 +9,10 @@
     body {
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #ffffff;
       color: #111;
       text-align: center;
       line-height: 1.6;
+      background: #fff;
     }
 
     header {
@@ -21,24 +20,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px 10px 20px;
-      border-bottom: 1px solid #ddd;
+      padding: 28px 16px 4px 16px;
+      border-bottom: none;
     }
 
-    header img {
-      height: 140px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0;
-      color: #333;
+    header img.logo {
+      height: 120px;
+      max-width: 90vw;
+      margin: 0 auto;
+      display: block;
     }
 
     main {
-      padding: 60px 20px;
+      padding: 18px 20px 60px;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -48,38 +42,32 @@
       height: auto;
       object-fit: cover;
       border-radius: 12px;
-      margin-bottom: 20px;
+      margin: 14px auto 10px;
       border: 1px solid #ccc;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    /* Neuer Text unter Foto */
+    .untertitel {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0 0 8px 0;
+      font-weight: 600;
     }
 
     h2 {
       color: #0b5a5a;
-      margin-top: 40px;
-      font-size: 1.4rem;
+      margin-top: 20px;
+      font-size: 1.5rem;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    ul li {
-      padding: 6px 0;
-      font-weight: 500;
-    }
-
-    a {
-      color: #0b5a5a;
-      text-decoration: none;
-    }
+    ul { list-style: none; padding: 0; margin: 0; }
+    ul li { padding: 6px 0; font-weight: 500; }
+    a { color: #0b5a5a; text-decoration: none; }
 
     footer {
-      margin-top: 60px;
+      margin-top: 50px;
       padding: 20px;
       border-top: 1px solid #ddd;
       color: #666;
@@ -90,17 +78,20 @@
 
 <body>
   <header>
-    <!-- Dein neues Logo -->
-    <img src="logo_tarek_el_sayed_balance_exact.svg" alt="Logo Tarek El Sayed – Rechtsanwalt">
-    <h1>Tarek El Sayed – Rechtsberatung</h1>
+    <!-- Nur Logo oben -->
+    <img src="logo_tarek_el_sayed_balance_exact.svg" alt="Logo Tarek El Sayed – Rechtsanwalt" class="logo">
   </header>
 
   <main>
+    <!-- Foto -->
     <img src="dein-foto.jpg" alt="Foto von Tarek El Sayed" class="portrait">
 
+    <!-- Text jetzt unter dem Foto -->
+    <p class="untertitel">Tarek El Sayed – Rechtsberatung</p>
+
+    <!-- Überschrift -->
     <h2>Rechtsanwalt mit Herz und Leidenschaft</h2>
     <p>Hallo und herzlich willkommen bei <strong>elsayed.legal</strong>!</p>
-    <p>Ich freue mich, Sie auf meiner Webseite begrüßen zu dürfen.</p>
 
     <section id="ueber">
       <h2>Über mich</h2>
@@ -111,12 +102,10 @@
         <strong>Versicherungsrecht</strong>, <strong>Verkehrsrecht</strong> und
         <strong>internationales Speditionsrecht</strong>.
       </p>
-
       <p>
         In meiner täglichen Arbeit lege ich großen Wert auf persönliche Betreuung, klare Kommunikation und
         lösungsorientiertes Handeln. Ich nehme mir Zeit für jedes Anliegen – denn jedes Mandat ist einzigartig.
       </p>
-
       <p>
         Zögern Sie nicht, mich zu kontaktieren – ich berate Sie gern und setze mich mit vollem Engagement
         für Ihre Interessen ein.
