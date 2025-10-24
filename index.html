@@ -24,9 +24,7 @@
       padding: 28px 16px 8px;
     }
 
-    header a {
-      text-decoration: none;
-    }
+    header a { text-decoration: none; }
 
     header img.logo {
       height: 160px;
@@ -65,16 +63,8 @@
       font-size: 1.5rem;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    ul li {
-      padding: 6px 0;
-      font-weight: 500;
-    }
+    ul { list-style: none; padding: 0; margin: 0; }
+    ul li { padding: 6px 0; font-weight: 500; }
 
     a {
       color: #000;
@@ -82,11 +72,7 @@
       font-weight: 600;
       transition: all 0.3s ease;
     }
-
-    a:hover {
-      text-decoration: underline;
-      color: #0b5a5a;
-    }
+    a:hover { text-decoration: underline; color: #0b5a5a; }
 
     .contact-row {
       display: flex;
@@ -96,10 +82,7 @@
       margin: 10px 0;
     }
 
-    .contact-icon {
-      font-size: 1.4rem;
-      color: #000;
-    }
+    .contact-icon { font-size: 1.4rem; color: #000; }
 
     .whatsapp-btn {
       display: inline-block;
@@ -113,11 +96,7 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s ease, background-color 0.3s ease;
     }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.05);
-      background-color: #094d4d;
-    }
+    .whatsapp-btn:hover { transform: scale(1.05); background-color: #094d4d; }
 
     footer {
       margin-top: 50px;
@@ -126,20 +105,42 @@
       color: #666;
       font-size: 0.9rem;
     }
+    footer a { color: #0b5a5a; text-decoration: none; font-weight: 600; margin: 0 8px; }
+    footer a:hover { color: #C9A227; }
 
-    footer a {
-      color: #0b5a5a;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 8px;
+    /* ===== Cookie Consent (Opt-in) – Styles ===== */
+    #consent-banner {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+      background: #0b5a5a; color: #fff; padding: 16px;
+      box-shadow: 0 -6px 18px rgba(0,0,0,0.15); display: none;
+      font-size: 0.95rem;
     }
-
-    footer a:hover {
-      color: #C9A227;
+    #consent-banner .wrap {
+      max-width: 1000px; margin: 0 auto; display: grid; gap: 10px;
+      grid-template-columns: 1fr auto; align-items: center;
+    }
+    #consent-banner a { color: #FFD466; text-decoration: underline; }
+    #consent-banner .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    #consent-banner button {
+      padding: 8px 14px; border-radius: 8px; border: none; cursor: pointer; font-weight: 700;
+    }
+    .btn-accept { background: #FFD466; color: #0b5a5a; }
+    .btn-decline { background: #174e4e; color: #fff; }
+    .btn-accept:hover, .btn-decline:hover { filter: brightness(0.95); }
+    #consent-prefs { display: none; background: #094d4d; border-radius: 10px; padding: 10px; margin-top: 8px; }
+    #consent-prefs label { display: inline-flex; align-items: center; gap: 6px; margin-right: 12px; }
+    #toggle-prefs {
+      margin-top: 6px; background: transparent; border: 1px solid #FFD466; color: #FFD466;
+      border-radius: 8px; padding: 4px 8px; cursor: pointer;
+    }
+    #consent-manage {
+      position: fixed; right: 12px; bottom: 12px; z-index: 9998;
+      background: #eee; color: #333; border: 1px solid #ccc; padding: 6px 10px;
+      border-radius: 8px; cursor: pointer; font-size: 0.85rem;
     }
   </style>
 
-  <!-- Font Awesome für Icons -->
+  <!-- Font Awesome (optional, aktuell nicht zwingend nötig) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
@@ -184,39 +185,36 @@
     </section>
 
     <section id="kontakt">
-  <h2>Kontakt</h2>
+      <h2>Kontakt</h2>
 
-  <p><strong>E-Mail:</strong><br>
-    <a href="mailto:info@elsayed.legal" style="color:#000; text-decoration:underline; margin-left:5px;">
-      info@elsayed.legal
-    </a>
-  </p>
+      <p><strong>E-Mail:</strong>
+        <a href="mailto:info@elsayed.legal" style="color:#000; text-decoration:underline; margin-left:5px;">
+          info@elsayed.legal
+        </a>
+      </p>
 
-  <p><strong>Telefon:</strong><br>
-    <a href="tel:+4917644796615" style="color:#000; text-decoration:underline; margin-left:5px;">
-      +49 176 44796615
-    </a>
-  </p>
+      <p><strong>Telefon:</strong>
+        <a href="tel:+4917644796615" style="color:#000; text-decoration:underline; margin-left:5px;">
+          +49 176 44796615
+        </a>
+      </p>
 
-  <p>
-    <a href="https://wa.me/4917644796615?text=Hallo%20Herr%20El%20Sayed,%20ich%20möchte%20mich%20gerne%20rechtlich%20beraten%20lassen."
-       target="_blank"
-       style="display:inline-block; background-color:#0b5a5a; color:white; font-weight:600;
-              padding:8px 16px; border-radius:8px; text-decoration:none; font-size:0.9rem;
-              box-shadow:0 2px 5px rgba(0,0,0,0.15); transition:transform 0.2s ease, background-color 0.3s ease;">
-      💬 WhatsApp-Nachricht senden
-    </a>
-  </p>
+      <p>
+        <a href="https://wa.me/4917644796615?text=Hallo%20Herr%20El%20Sayed,%20ich%20möchte%20mich%20gerne%20rechtlich%20beraten%20lassen."
+           target="_blank"
+           class="whatsapp-btn">
+          💬 WhatsApp-Nachricht senden
+        </a>
+      </p>
 
-  <h3 style="color:#0b5a5a;">Hier finden Sie mich:</h3>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.842129778872!2d9.9741!3d53.4653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b188e3f55d0b9f%3A0x4b78b7f2b7d1c52b!2sBleicherweg%202%2C%2021073%20Hamburg!5e0!3m2!1sde!2sde!4v1696597338735!5m2!1sde!2sde"
-    width="100%" height="400" style="border:0; border-radius:10px;"
-    allowfullscreen="" loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
-
+      <h3 style="color:#0b5a5a;">Hier finden Sie mich:</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.842129778872!2d9.9741!3d53.4653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b188e3f55d0b9f%3A0x4b78b7f2b7d1c52b!2sBleicherweg%202%2C%2021073%20Hamburg!5e0!3m2!1sde!2sde!4v1696597338735!5m2!1sde!2sde"
+        width="100%" height="400" style="border:0; border-radius:10px;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
   </main>
 
   <footer>
@@ -225,6 +223,94 @@
     &nbsp;|&nbsp; <a href="impressum.html">Impressum</a>  
     &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
   </footer>
+
+  <!-- ===== Cookie Consent (Opt-in) – HTML + Script ===== -->
+  <div id="consent-banner" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+    <div class="wrap">
+      <div>
+        Wir verwenden Cookies für grundlegende Funktionen und – nur mit Ihrer Zustimmung – für <strong>Analyse</strong>.
+        Keine Marketing-Cookies. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+        <div id="consent-prefs" aria-live="polite">
+          <label><input type="checkbox" checked disabled> Notwendig</label>
+          <label><input type="checkbox" id="consent-analytics"> Analyse</label>
+        </div>
+        <button id="toggle-prefs">Einstellungen</button>
+      </div>
+      <div class="actions">
+        <button class="btn-decline" id="consent-decline">Ablehnen</button>
+        <button class="btn-accept" id="consent-accept">Zustimmen</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="consent-manage" aria-haspopup="dialog" aria-controls="consent-banner" title="Cookie-Einstellungen">
+    Cookie-Einstellungen
+  </button>
+
+  <script>
+    (function(){
+      var KEY = "siteConsentV1";
+      var banner = document.getElementById('consent-banner');
+      var btnAccept = document.getElementById('consent-accept');
+      var btnDecline = document.getElementById('consent-decline');
+      var btnManage = document.getElementById('consent-manage');
+      var togglePrefs = document.getElementById('toggle-prefs');
+      var prefs = document.getElementById('consent-prefs');
+      var analyticsCk = document.getElementById('consent-analytics');
+
+      function readConsent(){
+        try { return JSON.parse(localStorage.getItem(KEY)); } catch(e){ return null; }
+      }
+      function writeConsent(val){
+        try { localStorage.setItem(KEY, JSON.stringify(val)); } catch(e){}
+      }
+      function applyConsent(c){
+        // === Beispiel: Google Analytics NUR laden, wenn zugestimmt ===
+        // Falls du GA4 verwenden möchtest:
+        // 1) Ersetze 'G-XXXXXXX' durch deine echte Mess-ID
+        // 2) Entferne die Kommentar-Slashes (//) der folgenden Zeilen
+        /*
+        if (c && c.analytics) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
+          document.head.appendChild(s);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXX', { 'anonymize_ip': true });
+        }
+        */
+      }
+
+      var saved = readConsent();
+      if (!saved) {
+        banner.style.display = 'block';
+      } else {
+        applyConsent(saved);
+      }
+
+      btnAccept.addEventListener('click', function(){
+        var c = { necessary: true, analytics: analyticsCk.checked };
+        writeConsent(c);
+        banner.style.display = 'none';
+        applyConsent(c);
+      });
+      btnDecline.addEventListener('click', function(){
+        var c = { necessary: true, analytics: false };
+        writeConsent(c);
+        banner.style.display = 'none';
+      });
+
+      btnManage.addEventListener('click', function(){
+        banner.style.display = 'block';
+      });
+      togglePrefs.addEventListener('click', function(){
+        prefs.style.display = (prefs.style.display === 'block' ? 'none' : 'block');
+      });
+    })();
+  </script>
 </body>
 </html>
 
