@@ -5,52 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>elsayed.legal – Rechtsanwalt mit Herz und Leidenschaft</title>
   <meta name="description" content="Rechtsanwalt Tarek El Sayed – Zivilrecht, Strafrecht, Versicherungsrecht, Verkehrsrecht, Handelsrecht, Speditions- und Transportrecht.">
+
   <style>
-    body {font-family:"Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin:0; color:#111; text-align:center; line-height:1.6; background:#fff;}
-    header {display:flex; flex-direction:column; align-items:center; justify-content:center; padding:28px 16px 8px;}
-    header a {text-decoration:none;}
-    header img.logo {height:160px; max-width:95vw; margin:0 auto 10px; display:block;}
-    main {padding:18px 20px 60px; max-width:900px; margin:0 auto;}
-    img.portrait {width:250px; height:auto; object-fit:cover; border-radius:12px; margin:14px auto 10px; border:1px solid #ccc; box-shadow:0 4px 12px rgba(0,0,0,0.08); display:block;}
-    .untertitel {font-size:1.1rem; color:#333; margin:0 0 8px; font-weight:600;}
-    h2 {color:#0b5a5a; margin-top:20px; font-size:1.5rem;}
-    ul {list-style:none; padding:0; margin:0;} 
-    ul li {padding:6px 0; font-weight:500;}
-    a {color:#0b5a5a; text-decoration:none;}
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      color: #111;
+      text-align: center;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 16px 8px;
+    }
+
+    header a {
+      text-decoration: none;
+    }
+
+    header img.logo {
+      height: 160px;
+      max-width: 95vw;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    main {
+      padding: 18px 20px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    img.portrait {
+      width: 250px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 14px auto 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: block;
+    }
+
+    .untertitel {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0 0 8px;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #0b5a5a;
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      padding: 6px 0;
+      font-weight: 500;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0b5a5a;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
     .contact-icon {
-      font-size:1.4rem;
-      margin-right:6px;
-      vertical-align:middle;
+      font-size: 1.4rem;
+      color: #000;
     }
-    .contact-link {
-      font-weight:600;
-      font-size:1.05rem;
-      color:#0b5a5a;
-      text-decoration:none;
-      vertical-align:middle;
-    }
+
     .whatsapp-btn {
-      display:inline-block; 
-      background-color:#0b5a5a; 
-      color:white; 
-      font-weight:600;
-      padding:10px 18px; 
-      border-radius:8px; 
-      text-decoration:none; 
-      font-size:0.95rem;
-      box-shadow:0 2px 5px rgba(0,0,0,0.15);
-      transition:transform 0.2s ease, background-color 0.3s ease;
+      display: inline-block;
+      background-color: #0b5a5a;
+      color: white;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, background-color 0.3s ease;
     }
+
     .whatsapp-btn:hover {
-      transform:scale(1.05);
-      background-color:#094d4d;
+      transform: scale(1.05);
+      background-color: #094d4d;
     }
-    footer {margin-top:50px; padding:20px; border-top:1px solid #ddd; color:#666; font-size:0.9rem;}
-    footer a {color:#0b5a5a; text-decoration:none; font-weight:600; margin:0 8px;}
-    footer a:hover {color:#C9A227;}
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #0b5a5a;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: #C9A227;
+    }
   </style>
+
+  <!-- Font Awesome für Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header>
     <a href="index.html">
@@ -91,44 +183,43 @@
       </ul>
     </section>
 
- <section id="kontakt">
-  <h2>Kontakt</h2>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
 
-  <p>
-    <i class="fas fa-envelope contact-icon" style="color:#000;"></i>
-    <a href="mailto:info@elsayed.legal" class="contact-link" style="color:#000;">info@elsayed.legal</a>
-  </p>
+      <div class="contact-row">
+        <i class="fas fa-envelope contact-icon"></i>
+        <a href="mailto:info@elsayed.legal">info@elsayed.legal</a>
+      </div>
 
-  <p>
-    <i class="fas fa-phone contact-icon" style="color:#000;"></i>
-    <a href="tel:+4917644796615" class="contact-link" style="color:#000;">+49 176 44796615</a>
-  </p>
+      <div class="contact-row">
+        <i class="fas fa-phone contact-icon"></i>
+        <a href="tel:+4917644796615">+49 176 44796615</a>
+      </div>
 
-  <p>
-    <a href="https://wa.me/4917644796615?text=Hallo%20Herr%20El%20Sayed,%20ich%20möchte%20mich%20gerne%20rechtlich%20beraten%20lassen."
-       target="_blank" class="whatsapp-btn"
-       style="background-color:#0b5a5a; font-size:0.9rem; padding:8px 16px;">
-      💬 WhatsApp-Nachricht senden
-    </a>
-  </p>
+      <p>
+        <a href="https://wa.me/4917644796615?text=Hallo%20Herr%20El%20Sayed,%20ich%20möchte%20mich%20gerne%20rechtlich%20beraten%20lassen."
+           target="_blank" class="whatsapp-btn">
+          💬 WhatsApp-Nachricht senden
+        </a>
+      </p>
 
-  <h3 style="color:#0b5a5a;">Hier finden Sie mich:</h3>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.842129778872!2d9.9741!3d53.4653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b188e3f55d0b9f%3A0x4b78b7f2b7d1c52b!2sBleicherweg%202%2C%2021073%20Hamburg!5e0!3m2!1sde!2sde!4v1696597338735!5m2!1sde!2sde"
-    width="100%" height="400" style="border:0; border-radius:10px;"
-    allowfullscreen="" loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
-
+      <h3 style="color:#0b5a5a;">Hier finden Sie mich:</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.842129778872!2d9.9741!3d53.4653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b188e3f55d0b9f%3A0x4b78b7f2b7d1c52b!2sBleicherweg%202%2C%2021073%20Hamburg!5e0!3m2!1sde!2sde!4v1696597338735!5m2!1sde!2sde"
+        width="100%" height="400" style="border:0; border-radius:10px;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
   </main>
 
   <footer>
-    © <script>document.write(new Date().getFullYear())</script> elsayed.legal
-    &nbsp;|&nbsp; <a href="index.html">Startseite</a>
-    &nbsp;|&nbsp; <a href="impressum.html">Impressum</a>
+    © <script>document.write(new Date().getFullYear())</script> elsayed.legal  
+    &nbsp;|&nbsp; <a href="index.html">Startseite</a>  
+    &nbsp;|&nbsp; <a href="impressum.html">Impressum</a>  
     &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
   </footer>
 </body>
 </html>
+
 
