@@ -16,6 +16,20 @@
     footer {border-top:1px solid #ddd; margin-top:40px; padding:16px; color:#666; font-size:0.9rem;}
     footer a {color:#0b5a5a; text-decoration:none; font-weight:600; margin:0 8px;}
     footer a:hover {color:#C9A227;}
+
+    /* Cookie Consent Styles */
+    #consent-banner { position: fixed; left:0; right:0; bottom:0; z-index:9999; background:#0b5a5a; color:#fff; padding:16px; box-shadow:0 -6px 18px rgba(0,0,0,0.15); display:none; font-size:0.95rem; }
+    #consent-banner .wrap { max-width:1000px; margin:0 auto; display:grid; gap:10px; grid-template-columns:1fr auto; align-items:center; }
+    #consent-banner a { color:#FFD466; text-decoration:underline; }
+    #consent-banner .actions { display:flex; gap:8px; flex-wrap:wrap; }
+    #consent-banner button { padding:8px 14px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+    .btn-accept { background:#FFD466; color:#0b5a5a; }
+    .btn-decline { background:#174e4e; color:#fff; }
+    .btn-accept:hover, .btn-decline:hover { filter:brightness(0.95); }
+    #consent-prefs { display:none; background:#094d4d; border-radius:10px; padding:10px; margin-top:8px; }
+    #consent-prefs label { display:inline-flex; align-items:center; gap:6px; margin-right:12px; }
+    #toggle-prefs { margin-top:6px; background:transparent; border:1px solid #FFD466; color:#FFD466; border-radius:8px; padding:4px 8px; cursor:pointer; }
+    #consent-manage { position:fixed; right:12px; bottom:12px; z-index:9998; background:#eee; color:#333; border:1px solid #ccc; padding:6px 10px; border-radius:8px; cursor:pointer; font-size:0.85rem; }
   </style>
 </head>
 <body>
@@ -37,6 +51,62 @@
     &nbsp;|&nbsp; <a href="impressum.html">Impressum</a>
     &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
   </footer>
+
+  <!-- Cookie Consent -->
+  <div id="consent-banner" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+    <div class="wrap">
+      <div>
+        Wir verwenden Cookies für grundlegende Funktionen und – nur mit Ihrer Zustimmung – für <strong>Analyse</strong>.
+        Keine Marketing-Cookies. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+        <div id="consent-prefs" aria-live="polite">
+          <label><input type="checkbox" checked disabled> Notwendig</label>
+          <label><input type="checkbox" id="consent-analytics"> Analyse</label>
+        </div>
+        <button id="toggle-prefs">Einstellungen</button>
+      </div>
+      <div class="actions">
+        <button class="btn-decline" id="consent-decline">Ablehnen</button>
+        <button class="btn-accept" id="consent-accept">Zustimmen</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="consent-manage" aria-haspopup="dialog" aria-controls="consent-banner" title="Cookie-Einstellungen">
+    Cookie-Einstellungen
+  </button>
+
+  <script>
+    (function(){
+      var KEY = "siteConsentV1";
+      var banner = document.getElementById('consent-banner');
+      var btnAccept = document.getElementById('consent-accept');
+      var btnDecline = document.getElementById('consent-decline');
+      var btnManage = document.getElementById('consent-manage');
+      var togglePrefs = document.getElementById('toggle-prefs');
+      var prefs = document.getElementById('consent-prefs');
+      var analyticsCk = document.getElementById('consent-analytics');
+
+      function readConsent(){ try { return JSON.parse(localStorage.getItem(KEY)); } catch(e){ return null; } }
+      function writeConsent(val){ try { localStorage.setItem(KEY, JSON.stringify(val)); } catch(e){} }
+      function applyConsent(c){
+        /* GA4 nur bei Zustimmung laden – siehe index.html für Beispiel */
+      }
+
+      var saved = readConsent();
+      if (!saved) { banner.style.display = 'block'; } else { applyConsent(saved); }
+
+      btnAccept.addEventListener('click', function(){
+        var c = { necessary: true, analytics: analyticsCk.checked };
+        writeConsent(c); banner.style.display = 'none'; applyConsent(c);
+      });
+      btnDecline.addEventListener('click', function(){
+        var c = { necessary: true, analytics: false };
+        writeConsent(c); banner.style.display = 'none';
+      });
+      btnManage.addEventListener('click', function(){ banner.style.display = 'block'; });
+      togglePrefs.addEventListener('click', function(){ prefs.style.display = (prefs.style.display === 'block' ? 'none' : 'block'); });
+    })();
+  </script>
 </body>
 </html>
 
